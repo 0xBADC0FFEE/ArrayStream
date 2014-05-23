@@ -5,7 +5,7 @@
  */
 
 var Stream = require('stream').Stream;
-    nextTick = process.nextTick;
+    nextTick = setImmediate ? setImmediate : process.nextTick;
 
 /**
  * @constructor
